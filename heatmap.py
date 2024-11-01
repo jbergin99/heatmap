@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # get the lates trader tagging file
-downloads_folder = os.path.join(os.environ['USERPROFILE'], 'Downloads')
+downloads_folder = os.path.join(os.environ.get('USERPROFILE') or os.environ.get('HOME'), 'Downloads')
 list_of_files = glob.glob(os.path.join(downloads_folder, 'trader_tagging*.csv'))
 latest_file = max(list_of_files, key=os.path.getmtime)
 
