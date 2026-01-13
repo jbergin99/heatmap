@@ -33,7 +33,7 @@ def plot_heatmap(pivot_table):
     )
     ax.set_xlabel("")
     ax.set_ylabel("")
-    ax.tick_params(axis='x', rotation=0, labelsize=12)
+    ax.tick_params(axis='x', rotation=90, labelsize=12)
     ax.tick_params(axis='y', labelsize=10)
     # Row divider lines
     for i in range(len(pivot_table) + 1):
@@ -92,5 +92,6 @@ if uploaded_file is not None:
 
 else:
     st.warning("Please upload a trader tagging CSV file to generate the heatmaps.")
+
 
 
